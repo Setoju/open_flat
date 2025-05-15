@@ -14,6 +14,15 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_15_145149) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
+  create_table "apartments", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "description"
+    t.decimal "price", precision: 12, scale: 2, null: false
+    t.string "address", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
