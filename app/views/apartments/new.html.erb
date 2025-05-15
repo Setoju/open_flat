@@ -24,7 +24,8 @@
 
   <div class="mb-3">
     <%= form.label :address, class: "form-label" %>
-    <%= form.text_field :address, class: "form-control" %>
+    <%= form.text_field :address, class: "form-control", 
+                       data: { controller: "address-autocomplete" } %>
   </div>
 
   <div class="mb-3">
